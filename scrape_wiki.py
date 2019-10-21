@@ -33,6 +33,11 @@ nome_minimo = dic_precos['nome'][dic_precos['preço'].index(preco_minimo)]
 
 media = sum(dic_precos['preço']) / len(dic_precos['preço'])
 
+data = datetime.now()
+
+dia = data.strftime('%d/%m/%y')
+
+hora = data.strftime('%H:%M')
 
 html = f'''
 <!DOCTYPE html>
@@ -43,7 +48,7 @@ html = f'''
 <body>
 	<h1>O Celular mais barato</h1>
 	<p>
-		No dia {datetime.date} o celular mais barato era {nome_minimo}, com valor {preco_minimo}.
+		No dia {dia}, às {hora} o celular mais barato era {nome_minimo}, com valor {preco_minimo}.
 	</p>
 </body>
 </html>
